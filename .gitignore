@@ -1,4 +1,4 @@
 
 .vs
-SymLinker\bin
-SymLinker\obj
+/SymLinker/bin
+/SymLinker/obj
