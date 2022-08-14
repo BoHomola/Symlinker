@@ -1,0 +1,47 @@
+﻿<mah:MetroWindow
+    x:Class="SymLinker.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:uc="clr-namespace:SymLinker"
+    Title="SymLinker"
+    Height="850"
+    Width="300"
+    MaxWidth="400"
+    MinWidth="300"
+    MaxHeight="850"
+    MinHeight="850">
+
+    <Grid>
+
+        <StackPanel Name="MainPanel"  Visibility="Visible"  Margin="10,10,10,10" Width="auto">
+            <ScrollViewer HorizontalAlignment="Center"  Height="720" Margin="0,10,0,10" VerticalAlignment="Top" Width="auto" MinWidth="250"  VerticalScrollBarVisibility="Visible">
+                <StackPanel x:Name="MainSymlinksStackPanel">
+                    
+                </StackPanel>
+            </ScrollViewer>
+            <Button Content="Settings" Width="110" Style="{DynamicResource MahApps.Styles.Button.Square}" FontSize="14" VerticalAlignment="Top" Click="OpenSettings"></Button>
+        </StackPanel>
+        <StackPanel Name="SettingsPanel"  Visibility="Hidden" Margin="10,10,10,10" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="auto">
+            <TextBlock TextWrapping="Wrap" Text="Settings" FontSize="35" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+            <StackPanel Visibility="Visible" Margin="10,10,10,30" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="auto">
+                <TextBlock TextWrapping="Wrap" Text="Select destination folder" FontSize="13" Margin="0,0,0,10" HorizontalAlignment="Center"/>
+                <Button Content="Select"  Width="110" Margin="0,0,0,10" Click="SelectDestinationFolder_Click" Name="DestinationSelectButton"></Button>
+                <TextBox TextWrapping="Wrap" Name="DestinatinFolderPathTextBox"  Text="none" Width="auto" IsEnabled="False"  IsReadOnly="True"/>
+            </StackPanel>
+            <Button Content="+ Add Symlink Folder"  Width="140" Margin="0,0,0,10" Click="AddSymlinkFolder"></Button>
+
+            <ScrollViewer HorizontalAlignment="Center"  Height="500" Margin="0,0,0,10" VerticalAlignment="Top" Width="auto"  VerticalScrollBarVisibility="Visible">
+                <StackPanel x:Name="SettingsSymlinksStackPanel">
+
+                </StackPanel>
+            </ScrollViewer>
+
+            <Button Content="Save" Width="110" Style="{DynamicResource MahApps.Styles.Button.Square}" FontSize="14" VerticalAlignment="Top" Click="SaveSettings"></Button>
+        </StackPanel>
+
+
+    </Grid>
+
+
+</mah:MetroWindow>
